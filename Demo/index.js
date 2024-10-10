@@ -11,7 +11,7 @@ let nameFirst = "vishal";
 nameFirst = "singh";
 console.log(nameFirst);
 
-//hoisting
+//hoisting: only var  declartion are hosited at top var result so result is undefined, for let,const result:error
 console.log(result);
 var result = "name";
 
