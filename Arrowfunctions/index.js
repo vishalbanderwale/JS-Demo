@@ -40,6 +40,15 @@ const isFour = (a) => ({ value: a });
 
 console.log(isFour(2));
 
+//Default parameters
+
+//passing ony one number when (a,b): fun(6) result:NAN)not a number
+//fun(2,):syntax error
+//fun(2,undefined): 2+0:2
+
+const fun = (a, b = 0) => a + b;
+console.log(fun(6, 2));
+
 //rest:it takes a,b outisde and remaining it keep the all values in one array in rest mode
 
 const restFun = (a, b, ...rest) => {
@@ -78,10 +87,14 @@ const array10 = [3, 4];
 const [three, four] = array10;
 console.log(three, four);
 
-
 //restructing: remane parameter
 
 const obj11 = { first: 1, second: 9 };
-const { first:hi, second:hello } = obj11;
-console.log(hi,hello);
+const { first: hi, second: hello } = obj11;
+console.log(hi, hello);
 
+// const array11 = [1, 2];
+// const [five: vishal, six: singh] = array11;
+// console.log(vishal, singh);
+
+// we cannot restruct array becauses ae are not assiging to five and six
