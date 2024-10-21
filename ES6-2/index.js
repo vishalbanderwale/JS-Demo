@@ -60,8 +60,8 @@ const obj8 = {
   age: null,
 };
 
-console.log(obj8.name ?? "singh");
-console.log(obj8.age ?? 18);
+console.log(obj8.name ?? "singh"); //vishal
+console.log(obj8.age ?? 18); //18
 
 //optional chaining: access deeply nested properties of an object without having to explicitly check if each reference in the chain exists If any part of the chain is null or undefined, it returns undefined instead of throwing an runtime error.
 
@@ -77,4 +77,5 @@ const obj9 = {
 
 console.log(obj9.address?.street);
 console.log(obj9.address?.house);
+console.log(obj9.address?.pincode);
 console.log(obj9.address?.pincode);

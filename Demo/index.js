@@ -34,7 +34,7 @@ console.log(array1.length);
 // for variable follow camel case notation  for best practice: firstletter of first word lowercase than uppercase for second word,third...
 // 3 types of variable in js : let,const,var
 // variable declartion syntax : keyword(let,const,var) variable name(also know as identifiers): let a; than initalize a variable : keyword var name=value : let a=10;
-// In let we can  reintialze a value but in constant it will throw an error
+// In let we can reassigning a value but in constant it will throw an error
 // primitive data types/value types : numbers,string, booelan, null,undefined
 // Non primitive data types : objects,array,function
 // let and const are block scope(only can be accessed inside block) var is functional scope
