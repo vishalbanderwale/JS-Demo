@@ -40,3 +40,6 @@ const books = [
 const reduceFun3 = (a) => a.reduce((acc, { pages }) => acc + pages, 0);
 
 console.log(reduceFun3(books));
+
+
+
