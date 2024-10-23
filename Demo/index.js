@@ -40,3 +40,7 @@ console.log(array1.length);
 // let and const are block scope(only can be accessed inside block) var is functional scope
 //hoisting: var variables are hoisted at the top we can access before declartion only decalrtion are hosited at top so value is undefined
 // in var we get result: undefined , for let ,const : reference error
+
+a = 10;
+//a is a global variable if it defined without keyword
+//even if we decalre inside function it is global var
