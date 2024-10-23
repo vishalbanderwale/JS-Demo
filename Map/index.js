@@ -2,6 +2,7 @@ const array = [1, 2, 3, 4];
 const squareFun = (a) => a * a;
 
 const mainFun = (a) => a.map(squareFun); //map will return array
+//Map syntax: map(fun(element,index))
 //Map is also an function : map()
 //Map takes callback fun as an argument
 //we are not doing fun call for squareFun because it takes one element and index at a time
