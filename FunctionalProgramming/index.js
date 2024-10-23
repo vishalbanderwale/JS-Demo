@@ -38,3 +38,15 @@ console.log(birthday1(person1));
 const product = { name: "book", quantity: 20 };
 const productFun = (pro) => ({ ...pro, quantity: pro.quantity + 5 });
 console.log(productFun(product));
+
+// function add(a, b) {
+//   return [a, b];
+// }
+
+// console.log(add(3, 4));
+
+// const add1 = (a, b) => {
+//   return a + b;
+// };
+// const add2=(a,b)=>a+b;
+// console.log(add1(1, 1));

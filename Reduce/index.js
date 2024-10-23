@@ -8,7 +8,7 @@
 const array = [1, 2, 3, 4];
 
 const reduceFun = (a) => a.reduce((acc, curr) => acc + curr, 0);
-//acc takes updated value after addition: 0+1:1 ,1+2:3
+//acc takes updated  returned value after addition: 0+1:1 ,1+2:3
 
 console.log(reduceFun(array));
 
@@ -20,13 +20,14 @@ const reduceFun2 = (a) =>
   a.reduce((acc, curr) => {
     console.log(acc, curr); //(0,1), (1,2),(1,3),(4,4),(4,5),(9,6),(9,7)
     if (curr % 2 != 0) {
-      acc = acc + curr; //(0+1=1:acc), (1+3=4:acc) (4+5=9:acc) (9+7:16)
+      acc = acc + curr; //(0+1=1:acc),(1+3=4:acc),(4+5=9:acc),(9+7:16) we have to store value in acc & return acc
     } else {
       return acc;
     }
     return acc;
   }, 0);
 
+//curr%2!=0?acc+curr:acc here no need to write acc:acc+curr
 console.log(reduceFun2(array1));
 
 //sum of pages
@@ -40,6 +41,3 @@ const books = [
 const reduceFun3 = (a) => a.reduce((acc, { pages }) => acc + pages, 0);
 
 console.log(reduceFun3(books));
-
-
-
