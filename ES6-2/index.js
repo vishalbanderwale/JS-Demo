@@ -11,15 +11,21 @@ console.log(obj2.sonu);
 
 // if var and obj key are same we can remove the one name
 
-const naam = "vishal";
+const name = "vishal";
 const age = 24;
 
-const obj3 = { naam, age };
-
+const obj3 = { name, age };
 // const obj3={name:name,age:age}
-// const obj3={name:naam,age}
-
 console.log(obj3);
+
+const naam = "singh";
+const age3 = 25;
+const obj4 = { name: naam, age: age3 };
+// const obj3={name:naam,age:age3}
+const res = Object.values(obj4);
+console.log(res);
+console.log(obj4);
+console.log(JSON.stringify(obj4)); //JSON.stringify(convert normal obj to string obj)
 
 //Template literal
 
