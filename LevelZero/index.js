@@ -1,17 +1,41 @@
-let input = document.querySelector("#text1");
-let btnTranslator = document.querySelector("#btn");
-let ouput = document.querySelector("#output");
-
 // let two = document.querySelector("#output2");
 // two.innerText = "<h1>hello world</h1>";
 // two.innerHTML = "<h1>hello world</h1>";
 
-var url = "https://api.funtranslations.com/translate/minion.json";
+let input = document.querySelector("#text1");
+let btnTranslator = document.querySelector("#btn");
+let outputText = document.querySelector("#output");
 
-function translatorFun() {
-  output.innerText = "hello" + input.value;
+let url = "https://api.funtranslations.com/translate/minion.json";
+
+function urlHandler(inp) {
+  return url + "?" + "text=" + inp;
+  //adding input value
+  // converting text : "?" input param , text is key and inp is value
 }
 
-btnTranslator.addEventListener("click", translatorFun);
+function errorHandler(error) {
+  console.log("error occured", error);
+  alert("something went wrong");
+}
 
-//callback function: if one function goes as input of other function
+function clickHandler() {
+  //taking input
+  let x = input.value;
+  // console.log(x);
+
+  //calling server
+
+  fetch(urlHandler(x))
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      let z = json.contents.translated;
+      outputText.innerText = z;
+    })
+    .catch(errorHandler);
+  //.catch(errorHandler(error): error as parameter is not required when error occurs it directly calls fun)
+  // but when we write  errorHandler(error) it will call the func when it reaches that line even if error doesnot occurs
+}
+
+btnTranslator.addEventListener("click", clickHandler);
