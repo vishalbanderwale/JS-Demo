@@ -26,14 +26,21 @@ function clickHandler() {
 
   //calling server
 
-  fetch(urlHandler(x))
-    .then((response) => response.json())
+  fetch(urlHandler(x)) //it will return promise object
+    // console.log(fetch(urlHandler(x)))
+    .then((response) => {
+      console.log(response);
+      response.json();
+    })
     .then((json) => {
       console.log(json);
       let z = json.contents.translated;
       outputText.innerText = z;
     })
     .catch(errorHandler);
+
+  //When you call fetch(), it returns a Promise object, and
+  // .then() and .catch() are methods available on that Promise object to handle asynchronous operations.
   //.catch(errorHandler(error): error as parameter is not required when error occurs it directly calls fun)
   // but when we write  errorHandler(error) it will call the func when it reaches that line even if error doesnot occurs
 }
