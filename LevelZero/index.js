@@ -25,16 +25,14 @@ function clickHandler() {
   // console.log(x);
 
   //calling server
+  // console.log(fetch(urlHandler(x)))
 
   fetch(urlHandler(x)) //it will return promise object
-    // console.log(fetch(urlHandler(x)))
-    .then((response) => {
-      console.log(response);
-      response.json();
-    })
+    .then(
+      (response) => response.json() // console.log(response);
+    )
     .then((json) => {
-      console.log(json);
-      let z = json.contents.translated;
+      let z = json.contents.translated; //console.log(json);
       outputText.innerText = z;
     })
     .catch(errorHandler);
