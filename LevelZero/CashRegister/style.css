@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid black;
+  padding: 0.5rem 2rem;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background-color: brown;
+  border-radius: 5px;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+label,
+h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
